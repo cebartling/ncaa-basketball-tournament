@@ -6,3 +6,7 @@
 *.ear
 
 /java-backend/.gradle/
+
+/acceptance-tests/.gradle/
+
+*.iws
