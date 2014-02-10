@@ -20,8 +20,8 @@ module.exports = function (config) {
             'app/bower_components/bootstrap/dist/js/bootstrap.js',
             'test/bower_components/jasmine-jquery/lib/jasmine-jquery.js',
             'app/scripts/namespaces.js',
-            'app/scripts/*.js',
-            'test/spec/*spec.js',
+            'app/scripts/**/*.js',
+            'test/spec/**/*-spec.js',
             'test/spec/javascripts/helpers/*.js',
             { pattern: 'test/spec/javascripts/fixtures/*', included: false }
         ],
