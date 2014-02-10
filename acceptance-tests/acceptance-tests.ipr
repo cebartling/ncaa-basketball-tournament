@@ -82,6 +82,7 @@
         <root url="file://$APPLICATION_HOME_DIR$/bin/unresolved dependency - 'info.cukes cucumber-core 1.1.5'" />
         <root url="file://$APPLICATION_HOME_DIR$/bin/unresolved dependency - 'info.cukes cucumber-core 1.1.5'" />
         <root url="file://$APPLICATION_HOME_DIR$/bin/unresolved dependency - 'info.cukes cucumber-core 1.1.5'" />
+        <root url="file://$APPLICATION_HOME_DIR$/bin/unresolved dependency - 'info.cukes cucumber-core 1.1.5'" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
@@ -91,12 +92,14 @@
         <root url="file://$APPLICATION_HOME_DIR$/bin/unresolved dependency - 'info.cukes cucumber-java 1.1.5'" />
         <root url="file://$APPLICATION_HOME_DIR$/bin/unresolved dependency - 'info.cukes cucumber-java 1.1.5'" />
         <root url="file://$APPLICATION_HOME_DIR$/bin/unresolved dependency - 'info.cukes cucumber-java 1.1.5'" />
+        <root url="file://$APPLICATION_HOME_DIR$/bin/unresolved dependency - 'info.cukes cucumber-java 1.1.5'" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
     </library>
     <library name="Gradle: unresolved_dependency____info_cukes_cucumber_spring_1_1_5_">
       <CLASSES>
+        <root url="file://$APPLICATION_HOME_DIR$/bin/unresolved dependency - 'info.cukes cucumber-spring 1.1.5'" />
         <root url="file://$APPLICATION_HOME_DIR$/bin/unresolved dependency - 'info.cukes cucumber-spring 1.1.5'" />
         <root url="file://$APPLICATION_HOME_DIR$/bin/unresolved dependency - 'info.cukes cucumber-spring 1.1.5'" />
         <root url="file://$APPLICATION_HOME_DIR$/bin/unresolved dependency - 'info.cukes cucumber-spring 1.1.5'" />
