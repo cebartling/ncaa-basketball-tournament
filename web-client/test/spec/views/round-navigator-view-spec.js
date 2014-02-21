@@ -20,6 +20,10 @@
             it('sets the className to "round-navigator-view row".', function () {
                 expect(view.className).toBe('round-navigator-view row');
             });
+
+            it('sets up the click round link event wiring in the events hash', function () {
+                expect(view.events['click a']).toBe('onClickRoundLink');
+            });
         });
 
         describe('Render view', function () {
@@ -39,8 +43,35 @@
                 expect(view.render()).toBe(view);
             });
         });
-    });
 
+        describe('onClickRoundLink', function () {
+            beforeEach(function () {
+                view.render();
+            });
+
+            it('wires up the event handler to the DOM', function () {
+                var spy = spyOn(view, 'onClickRoundLink');
+                view.delegateEvents();
+                view.$el.find('a[href="#round1"]').click();
+                expect(spy).toHaveBeenCalled();
+                var eventArg = spy.mostRecentCall.args[0];
+                expect(eventArg instanceof jQuery.Event).toBeTruthy();
+            });
+
+            it('remove the "active" CSS class from all links', function () {
+                view.$el.find('li').addClass('active');
+                view.$el.find('a[href="#round1"]').click();
+                // We get one active at the end of the event handler.
+                expect(view.$el.find('li.active').length).toBe(1);
+            });
+
+            it('adds the "active" CSS class to the event target LI element', function () {
+                view.$el.find('a[href="#round1"]').parent().removeClass('active');
+                view.$el.find('a[href="#round1"]').click();
+                expect(view.$el.find('a[href="#round1"]').parent().hasClass('active')).toBeTruthy();
+            });
+        });
+    });
 })();
 
 
