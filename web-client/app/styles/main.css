@@ -6,3 +6,38 @@ body {
     margin: 50px auto 0 auto;
     width: 300px;
 }
+
+.tournament-bracket-header-view {
+    margin-bottom: 20px;
+    background-color: #6060a5;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    font-size: 17px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.tournament-bracket-view {
+    margin-bottom: 20px;
+    background-color: #ddd;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    font-size: 11px;
+}
+
+.tournament-bracket-view > .team1 {
+    border-bottom: 1px solid #222222;
+    padding-top: 5px;
+}
+
+.tournament-bracket-view > .team2 {
+    border-bottom: 1px solid #222222;
+    border-right: 1px solid #222222;
+    margin-bottom: 5px;
+    padding-top: 10px;
+}
+
