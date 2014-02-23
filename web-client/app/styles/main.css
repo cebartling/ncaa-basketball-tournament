@@ -26,18 +26,18 @@ body {
     border-radius: 4px;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    font-size: 11px;
+    font-size: 16px;
 }
 
 .tournament-bracket-view > .team1 {
-    border-bottom: 1px solid #222222;
+    /*border-bottom: 1px solid #222222;*/
     padding-top: 5px;
 }
 
 .tournament-bracket-view > .team2 {
-    border-bottom: 1px solid #222222;
-    border-right: 1px solid #222222;
-    margin-bottom: 5px;
-    padding-top: 10px;
+    /*border-bottom: 1px solid #222222;*/
+    /*border-right: 1px solid #222222;*/
+    margin-bottom: 10px;
+    padding-top: 5px;
 }
 
