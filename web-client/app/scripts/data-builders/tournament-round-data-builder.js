@@ -223,7 +223,85 @@
                     }
                 }
             }
-        } // END - round 3
+        }, // END - round 3
+
+        round4: {
+            round: 4,
+            numberOfGames: 2,
+            regions: {
+                midwest: {
+                    game1: {
+                        team1: {region_seeding: 1, team_name: "Louisville", record: "(29-5)", score: 77, winner: true},
+                        team2: {region_seeding: 12, team_name: "Oregon", record: "(26-8)", score: 69, winner: false}
+                    },
+                    game2: {
+                        team1: {region_seeding: 3, team_name: "Michigan State", record: "(25-8)", score: 61, winner: false},
+                        team2: {region_seeding: 2, team_name: "Duke", record: "(27-5)", score: 71, winner: true}
+                    }
+                },
+                west: {
+                    game1: {
+                        team1: {region_seeding: 9, team_name: "Wichita State", record: "(26-8)", score: 72, winner: true},
+                        team2: {region_seeding: 13, team_name: "La Salle", record: "(21-9)", score: 58, winner: false}
+                    },
+                    game2: {
+                        team1: {region_seeding: 6, team_name: "Arizona", record: "(25-7)", score: 70, winner: false},
+                        team2: {region_seeding: 2, team_name: "Ohio State", record: "(26-7)", score: 73, winner: true}
+                    }
+                },
+                south: {
+                    game1: {
+                        team1: {region_seeding: 1, team_name: "Kansas", record: "(29-5)", score: 85, winner: false},
+                        team2: {region_seeding: 4, team_name: "Michigan", record: "(26-7)", score: 87, winner: true}
+                    },
+                    game2: {
+                        team1: {region_seeding: 3, team_name: "Florida", record: "(26-7)", score: 62, winner: true},
+                        team2: {region_seeding: 15, team_name: "Florida Gulf Coast", record: "(24-10)", score: 50, winner: false}
+                    }
+                },
+                east: {
+                    game1: {
+                        team1: {region_seeding: 1, team_name: "Indiana", record: "(27-6)", score: 50, winner: false},
+                        team2: {region_seeding: 4, team_name: "Syracuse", record: "(26-9)", score: 61, winner: true}
+                    },
+                    game2: {
+                        team1: {region_seeding: 3, team_name: "Marquette", record: "(23-8)", score: 71, winner: true},
+                        team2: {region_seeding: 2, team_name: "Miami (FL)", record: "(27-6)", score: 61, winner: false}
+                    }
+                }
+            }
+        }, // END - round 4
+
+        round5: {
+            round: 5,
+            numberOfGames: 1,
+            regions: {
+                midwest: {
+                    game1: {
+                        team1: {region_seeding: 1, team_name: "Louisville", record: "(29-5)", score: 85, winner: true},
+                        team2: {region_seeding: 2, team_name: "Duke", record: "(27-5)", score: 63, winner: false}
+                    }
+                },
+                west: {
+                    game1: {
+                        team1: {region_seeding: 9, team_name: "Wichita State", record: "(26-8)", score: 70, winner: true},
+                        team2: {region_seeding: 2, team_name: "Ohio State", record: "(26-7)", score: 66, winner: false}
+                    }
+                },
+                south: {
+                    game1: {
+                        team1: {region_seeding: 4, team_name: "Michigan", record: "(26-7)", score: 79, winner: true},
+                        team2: {region_seeding: 3, team_name: "Florida", record: "(26-7)", score: 59, winner: false}
+                    }
+                },
+                east: {
+                    game1: {
+                        team1: {region_seeding: 4, team_name: "Syracuse", record: "(26-9)", score: 55, winner: true},
+                        team2: {region_seeding: 3, team_name: "Marquette", record: "(23-8)", score: 39, winner: false}
+                    }
+                }
+            }
+        } // END - round 5
     };
 
 })();
