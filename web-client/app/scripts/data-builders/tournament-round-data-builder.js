@@ -301,7 +301,29 @@
                     }
                 }
             }
-        } // END - round 5
+        },  // END - round 5
+
+        round6: {
+            round: 6,
+            numberOfGames: 2,
+            game1: {
+                        team1: {region_seeding: 1, team_name: "Louisville", record: "(29-5)", score: 72, winner: true, region: "Midwest"},
+                        team2: {region_seeding: 9, team_name: "Wichita State", record: "(26-8)", score: 68, winner: false, region: "West"}
+                },
+            game2: {
+                        team1: {region_seeding: 4, team_name: "Michigan", record: "(26-7)", score: 61, winner: true, region: "South"},
+                        team2: {region_seeding: 4, team_name: "Syracuse", record: "(26-9)", score: 56, winner: false, region: "East"}
+            }
+        },  // END - round 6
+
+        round7: {
+            round: 7,
+            numberOfGames: 1,
+            game1: {
+                        team1: {region_seeding: 1, team_name: "Louisville", record: "(29-5)", score: 82, winner: true, region: "Midwest"},
+                        team2: {region_seeding: 4, team_name: "Michigan", record: "(26-7)", score: 76, winner: false, region: "South"}
+            }
+        }  // END - round 6
     };
 
 })();
