@@ -1,4 +1,8 @@
 // https://github.com/samueltbrown/gradle-cucumber-plugin
+def gebVersion = '0.9.2'
+def seleniumVersion = '2.37.1'
+def cukeJvmVersion = '1.1.5'
+def junitVersion = '4.11'
 
 buildscript {
     repositories {
@@ -13,6 +17,7 @@ buildscript {
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'cucumber'
+apply plugin: "groovy"
 
 jar {
     baseName = 'ncaa-basketball-tournament-acceptance-tests'
@@ -23,21 +28,32 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    compile("'info.cukes:cucumber-core:1.1.5'")
-    compile("'info.cukes:cucumber-java:1.1.5'")
-    compile("'info.cukes:cucumber-spring:1.1.5'")
-
-    cucumberCompile 'info.cukes:cucumber-groovy:1.1.5'
+configurations {
+    testCompile.transitive = true
 }
 
+dependencies {
+    groovy 'org.codehaus.groovy:groovy-all:2.2.1'
+
+    testCompile "info.cukes:cucumber-core:$cukeJvmVersion"
+    testCompile "info.cukes:cucumber-java:$cukeJvmVersion"
+    testCompile "info.cukes:cucumber-groovy:$cukeJvmVersion"
+    testCompile "info.cukes:cucumber-junit:$cukeJvmVersion"
+
+    testCompile "org.gebish:geb-core:$gebVersion"
+    testCompile "org.gebish:geb-junit4:$gebVersion"
+    testCompile "org.gebish:geb-implicit-assertions:$gebVersion"
+    testCompile "junit:junit-dep:$junitVersion"
+    testCompile "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
+    testCompile "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
+    testRuntime "org.seleniumhq.selenium:selenium-support:$seleniumVersion"
+
+}
 
 cucumber {
     formats = ['asyougo', 'json:build/cucumber.json', 'junit:build/cucumber.xml']
-    glueDirs = ['src/test/resources/env',
-            'src/test/resources/support',
-            'src/test/resources/step_definitions']
-    featureDirs = ['src/cucumber/resources']
+    glueDirs = ['src/test/java']
+    featureDirs = ['src/test/resources']
     monochrome = false
     strict = false
     dryRun = false
