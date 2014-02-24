@@ -47,4 +47,16 @@ Then(~'^I should see the regional finals round brackets$') { ->
     page.assertNumberOfBrackets()
 }
 
+Then(~'^I should see the national semifinals round brackets$') { ->
+    at(NationalSemifinalsRoundPage)
+    page.assertNavigationPillForViewIsActive()
+    page.assertNumberOfBrackets()
+}
+
+Then(~'^I should see the national championship round bracket$') { ->
+    at(NationalChampionshipRoundPage)
+    page.assertNavigationPillForViewIsActive()
+    page.assertNumberOfBrackets()
+}
+
 

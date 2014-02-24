@@ -24,3 +24,11 @@ Feature: Navigate through the NCAA basketball tournament site
     When I click the "Regional Finals" navigation pill link
     Then I should see the regional finals round brackets
 
+  Scenario: Navigate to the national semifinals round of the tournament
+    When I click the "National Semifinals" navigation pill link
+    Then I should see the national semifinals round brackets
+
+  Scenario: Navigate to the national championship round of the tournament
+    When I click the "National Championship" navigation pill link
+    Then I should see the national championship round bracket
+
