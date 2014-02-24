@@ -16,3 +16,11 @@ Feature: Navigate through the NCAA basketball tournament site
     When I click the "Third round" navigation pill link
     Then I should see the third round brackets
 
+  Scenario: Navigate to the regional semifinals round of the tournament
+    When I click the "Regional Semifinals" navigation pill link
+    Then I should see the regional semifinals round brackets
+
+  Scenario: Navigate to the regional finals round of the tournament
+    When I click the "Regional Finals" navigation pill link
+    Then I should see the regional finals round brackets
+

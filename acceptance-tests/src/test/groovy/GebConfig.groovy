@@ -9,3 +9,15 @@ driver = {
     driver.setLogLevel(Level.WARNING)
     driver
 }
+
+waiting {
+    presets {
+        slow {
+            timeout = 20
+            retryInterval = 1
+        }
+        quick {
+            timeout = 1
+        }
+    }
+}

@@ -5,7 +5,7 @@ import geb.Page;
 class SecondRoundPage extends Page {
 
     static at = {
-        waitFor {
+        waitFor('quick') {
             $('h3').text() == 'Second round'
         }
     }

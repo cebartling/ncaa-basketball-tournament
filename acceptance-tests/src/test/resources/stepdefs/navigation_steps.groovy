@@ -1,8 +1,6 @@
 package stepdefs
 
-import pages.FirstRoundPage
-import pages.SecondRoundPage
-import pages.ThirdRoundPage
+import pages.*
 
 this.metaClass.mixin(cucumber.api.groovy.Hooks)
 this.metaClass.mixin(cucumber.api.groovy.EN)
@@ -36,3 +34,17 @@ Then(~'^I should see the third round brackets$') { ->
     page.assertNavigationPillForViewIsActive()
     page.assertNumberOfBrackets()
 }
+
+Then(~'^I should see the regional semifinals round brackets$') { ->
+    at(RegionalSemifinalsRoundPage)
+    page.assertNavigationPillForViewIsActive()
+    page.assertNumberOfBrackets()
+}
+
+Then(~'^I should see the regional finals round brackets$') { ->
+    at(RegionalFinalsRoundPage)
+    page.assertNavigationPillForViewIsActive()
+    page.assertNumberOfBrackets()
+}
+
+

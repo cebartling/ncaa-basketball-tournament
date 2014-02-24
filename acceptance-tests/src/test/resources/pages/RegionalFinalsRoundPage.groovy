@@ -2,16 +2,16 @@ package pages
 
 import geb.Page;
 
-class FirstRoundPage extends Page {
+class RegionalFinalsRoundPage extends Page {
 
     static at = {
         waitFor('quick') {
-            $('h3').text() == 'First round'
+            $('h3').text() == 'Regional Finals'
         }
     }
 
     void assertNavigationPillForViewIsActive() {
-        assert $('ul.nav > li.active > a[href="#round1"').text() == 'First round'
+        assert $('ul.nav > li.active > a[href="#round5"').text() == 'Regional Finals'
     }
 
     void assertNumberOfBrackets() {
