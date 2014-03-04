@@ -28,13 +28,16 @@
                 var midwestBracketView = new BasketballTournament.Views.TournamentBracketView({model: midwestGameModel});
 
                 var westGameModel = new BasketballTournament.Models.BracketModel(regions.west[gameIndex]);
-                var westBracketView = new BasketballTournament.Views.TournamentBracketView({model: westGameModel});
+                var westBracketView = new BasketballTournament.Views.TournamentBracketView({model: westGameModel,
+                    className: 'tournament-bracket-view col-sm-offset-1 col-sm-2'});
 
                 var southGameModel = new BasketballTournament.Models.BracketModel(regions.south[gameIndex]);
-                var southBracketView = new BasketballTournament.Views.TournamentBracketView({model: southGameModel});
+                var southBracketView = new BasketballTournament.Views.TournamentBracketView({model: southGameModel,
+                    className: 'tournament-bracket-view col-sm-offset-1 col-sm-2'});
 
                 var eastGameModel = new BasketballTournament.Models.BracketModel(regions.east[gameIndex]);
-                var eastBracketView = new BasketballTournament.Views.TournamentBracketView({model: eastGameModel});
+                var eastBracketView = new BasketballTournament.Views.TournamentBracketView({model: eastGameModel,
+                    className: 'tournament-bracket-view col-sm-offset-1 col-sm-2'});
 
                 var row = $('<div class="row"></div>');
                 row.append(midwestBracketView.render().el);

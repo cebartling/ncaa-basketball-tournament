@@ -106,7 +106,7 @@
                         team2: {region_seeding: 9, team_name: "Villanova", record: "(20-13)", score: 71, winner: false}
                     },
                     game3: {
-                        team1: {region_seeding: 5, team_name: "Virginia Commonwealth", record: "(26-8)", score: 88, winner: true},
+                        team1: {region_seeding: 5, team_name: "Virginia Common.", record: "(26-8)", score: 88, winner: true},
                         team2: {region_seeding: 12, team_name: "Akron", record: "(26-6)", score: 52, winner: false}
                     },
                     game4: {

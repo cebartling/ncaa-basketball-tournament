@@ -1,39 +1,31 @@
 (function () {
     'use strict';
 
-    describe('BasketballTournament.Views.TournamentBracketView', function () {
+    describe('BasketballTournament.Views.TournamentNationalFinalsRoundView', function () {
         var view, model;
 
         beforeEach(function () {
-            model = new BasketballTournament.Models.BracketModel({
-                team1:{ region_seeding: 1, team_name: 'Louisville', record: '(29-5)' },
-                team2:{ region_seeding: 16, team_name: 'North Carolina A&T', record: '(19-16)' }
-            });
-            view = new BasketballTournament.Views.TournamentBracketView({model: model});
+            model = new BasketballTournament.Models.TournamentRoundModel(BasketballTournament.DataBuilders.TournamentRoundDataBuilder.round7, {round: 7});
+            view = new BasketballTournament.Views.TournamentNationalFinalsRoundView({model: model});
         });
 
         describe('Initialization', function () {
             it('sets the Handlebars template.', function () {
-                expect(view.template).toBe(JST['app/scripts/templates/tournament-bracket-view.hbs']);
+                expect(view.template).toBe(JST['app/scripts/templates/tournament-national-finals-round-view.hbs']);
             });
 
             it('sets the tagName to "div".', function () {
                 expect(view.tagName).toBe('div');
             });
 
-            it('sets the className to "tournament-bracket-view col-sm-2".', function () {
-                expect(view.className).toBe('tournament-bracket-view col-sm-2');
+            it('sets the className to "tournament-round-view".', function () {
+                expect(view.className).toBe('tournament-round-view');
             });
         });
 
         describe('Render view', function () {
-            it('invokes the toJSON function on the model.', function () {
-                var spy = spyOn(model, 'toJSON').andCallThrough();
-                view.render();
-                expect(spy).toHaveBeenCalled();
-            });
 
-            it("invokes the template function pass the model JSON as context.", function () {
+            it("invokes the template function, passing an empty context.", function () {
                 var spy = spyOn(view, 'template').andCallThrough();
                 view.render();
                 expect(spy).toHaveBeenCalledWith(model.toJSON());
@@ -52,5 +44,4 @@
     });
 
 })();
-
 

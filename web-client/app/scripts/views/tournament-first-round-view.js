@@ -5,6 +5,10 @@
         className: 'tournament-round-view',
         template: JST['app/scripts/templates/tournament-first-round-view.hbs'],
 
+        initialize: function(options) {
+            this.childViews = [];
+        },
+
         render: function () {
             this.$el.html(this.template(this.model.toJSON()));
             this.renderBrackets();
@@ -12,21 +16,27 @@
         },
 
         renderBrackets: function () {
-            var game1Model = new BasketballTournament.Models.BracketModel(this.model.get('game1'));
-            var game1View = new BasketballTournament.Views.TournamentBracketView({ model: game1Model });
-            var game2Model = new BasketballTournament.Models.BracketModel(this.model.get('game2'));
-            var game2View = new BasketballTournament.Views.TournamentBracketView({ model: game2Model });
-            var game3Model = new BasketballTournament.Models.BracketModel(this.model.get('game3'));
-            var game3View = new BasketballTournament.Views.TournamentBracketView({ model: game3Model });
-            var game4Model = new BasketballTournament.Models.BracketModel(this.model.get('game4'));
-            var game4View = new BasketballTournament.Views.TournamentBracketView({ model: game4Model });
+            this.removeChildViews();
             var row = $('<div class="row"></div>');
-            row.append(game1View.render().el);
-            row.append(game2View.render().el);
-            row.append(game3View.render().el);
-            row.append(game4View.render().el);
+            var games = ['game1', 'game2', 'game3', 'game4'];
+            var addOffset = false;
+            _.each(games, $.proxy(function(game){
+                var model = new BasketballTournament.Models.BracketModel(this.model.get(game));
+                var className = (addOffset) ? 'tournament-bracket-view col-sm-offset-1 col-sm-2'
+                    : 'tournament-bracket-view col-sm-2';
+                var view = new BasketballTournament.Views.TournamentBracketView({ model: model, className: className });
+                this.childViews.push(view);
+                row.append(view.render().el);
+                addOffset = true;
+            }, this));
             this.$el.find('div#brackets-container').append(row);
-        }
+        },
 
+        removeChildViews: function() {
+            _.each(this.childViews, function(childView){
+                childView.remove();
+            });
+            this.childViews = [];
+        }
     });
 })();

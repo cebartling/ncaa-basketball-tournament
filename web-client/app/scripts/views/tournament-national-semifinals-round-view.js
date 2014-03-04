@@ -25,6 +25,5 @@
             row.append(game2View.render().el);
             this.$el.find('div#brackets-container').append(row);
         }
-
     });
 })();

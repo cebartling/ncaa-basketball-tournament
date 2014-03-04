@@ -13,12 +13,11 @@ module.exports = function (config) {
 
 
         files: [
-            'app/bower_components/jquery/jquery.js',
+            'app/bower_components/jquery/dist/jquery.js',
             'app/bower_components/underscore/underscore.js',
             'app/bower_components/backbone/backbone.js',
             'app/bower_components/handlebars/handlebars.js',
             'app/bower_components/bootstrap/dist/js/bootstrap.js',
-            'test/bower_components/jasmine-jquery/lib/jasmine-jquery.js',
             'app/scripts/namespaces.js',
             '.tmp/scripts/templates.js',
             'app/scripts/**/*.js',
@@ -80,7 +79,7 @@ module.exports = function (config) {
             // source files, that you wanna generate coverage for
             // do not include tests or libraries
             // (these files will be instrumented by Istanbul)
-            'app/scripts/*.js': ['coverage']
+            'app/scripts/**/*.js': ['coverage']
         },
 
         // optionally, configure the reporter
