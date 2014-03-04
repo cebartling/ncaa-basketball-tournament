@@ -1,7 +1,19 @@
-<div class="team1">
-    {{ team1.region_seeding }} {{ team1.team_name }} {{ team1.record }}
+<div class="team1 clearfix">
+    {{#if team1.winner }}
+        <div class="pull-left"><strong>{{ team1.region_seeding }} {{ team1.team_name }}</strong></div> 
+        <div class="pull-right"><strong>{{ team1.score }}</strong></div>
+    {{else}}
+        <div class="pull-left">{{ team1.region_seeding }} {{ team1.team_name }}</div>
+        <div class="pull-right">{{ team1.score }}</div>
+    {{/if}}
 </div>
 <div class="team2">
-    {{ team2.region_seeding }} {{ team2.team_name }} {{ team2.record }}
+    {{#if team2.winner }}
+        <div class="pull-left"><strong>{{ team2.region_seeding }} {{ team2.team_name }}</strong></div>
+        <div class="pull-right"><strong>{{ team2.score }}</strong></div>
+    {{else}}
+        <div class="pull-left">{{ team2.region_seeding }} {{ team2.team_name }}</div>
+        <div class="pull-right">{{ team2.score }}</div>
+    {{/if}}
 </div>
 

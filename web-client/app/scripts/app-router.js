@@ -16,31 +16,45 @@
         },
 
         showRound1: function() {
-            console.log('Showing round 1 view.');
+            var model = new BasketballTournament.Models.TournamentRoundModel(BasketballTournament.DataBuilders.TournamentRoundDataBuilder.round1, {round: 1});
+            var view = new BasketballTournament.Views.TournamentFirstRoundView({model: model});
+            $('div.main-content').html(view.render().el);
         },
 
         showRound2: function() {
-            console.log('Showing round 2 view.');
+            var model = new BasketballTournament.Models.TournamentRoundModel(BasketballTournament.DataBuilders.TournamentRoundDataBuilder.round2, {round: 2});
+            var view = new BasketballTournament.Views.TournamentRegionalRoundView({model: model});
+            $('div.main-content').html(view.render().el);
         },
 
         showRound3: function() {
-            console.log('Showing round 3 view.');
+            var model = new BasketballTournament.Models.TournamentRoundModel(BasketballTournament.DataBuilders.TournamentRoundDataBuilder.round3, {round: 3});
+            var view = new BasketballTournament.Views.TournamentRegionalRoundView({model: model});
+            $('div.main-content').html(view.render().el);
         },
 
         showRound4: function() {
-            console.log('Showing round 4 view.');
+            var model = new BasketballTournament.Models.TournamentRoundModel(BasketballTournament.DataBuilders.TournamentRoundDataBuilder.round4, {round: 4});
+            var view = new BasketballTournament.Views.TournamentRegionalRoundView({model: model});
+            $('div.main-content').html(view.render().el);
         },
 
         showRound5: function() {
-            console.log('Showing round 5 view.');
+            var model = new BasketballTournament.Models.TournamentRoundModel(BasketballTournament.DataBuilders.TournamentRoundDataBuilder.round5, {round: 5});
+            var view = new BasketballTournament.Views.TournamentRegionalRoundView({model: model});
+            $('div.main-content').html(view.render().el);
         },
 
         showRound6: function() {
-            console.log('Showing round 6 view.');
+            var model = new BasketballTournament.Models.TournamentRoundModel(BasketballTournament.DataBuilders.TournamentRoundDataBuilder.round6, {round: 6});
+            var view = new BasketballTournament.Views.TournamentNationalSemifinalsRoundView({model: model});
+            $('div.main-content').html(view.render().el);
         },
 
         showRound7: function() {
-            console.log('Showing round 7 view.');
+            var model = new BasketballTournament.Models.TournamentRoundModel(BasketballTournament.DataBuilders.TournamentRoundDataBuilder.round7, {round: 7});
+            var view = new BasketballTournament.Views.TournamentNationalFinalsRoundView({model: model});
+            $('div.main-content').html(view.render().el);
         }
     });
 

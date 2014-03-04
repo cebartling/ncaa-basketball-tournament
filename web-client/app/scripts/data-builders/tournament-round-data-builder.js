@@ -3,6 +3,27 @@
 
     BasketballTournament.DataBuilders.TournamentRoundDataBuilder = {
 
+        round1: {
+            round: 1,
+            numberOfGames: 4,
+            game1: {
+                team1: {region_seeding: 16, team_name: "North Carolina A&T", record: "(19-16)", score: 73, winner: true},
+                team2: {region_seeding: 16, team_name: "Liberty", record: "(15-20)", score: 72, winner: false}
+            },
+            game2: {
+                team1: {region_seeding: 11, team_name: "Middle Tennessee", record: "(28-5)", score: 54, winner: false},
+                team2: {region_seeding: 11, team_name: "St. Mary's", record: "(27-6)", score: 67, winner: true}
+            },
+            game3: {
+                team1: {region_seeding: 16, team_name: "LIU Brooklyn", record: "(20-13)", score: 55, winner: false},
+                team2: {region_seeding: 16, team_name: "James Madison", record: "(20-14)", score: 68, winner: true}
+            },
+            game4: {
+                team1: {region_seeding: 13, team_name: "Boise State", record: "(21-10)", score: 71, winner: false},
+                team2: {region_seeding: 13, team_name: "La Salle", record: "(21-9)", score: 80, winner: true}
+            }
+        }, // END - round 1
+
         round2: {
             round: 2,
             numberOfGames: 8,

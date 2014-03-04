@@ -21,8 +21,8 @@
                 expect(view.tagName).toBe('div');
             });
 
-            it('sets the className to "tournament-bracket-view col-sm-2".', function () {
-                expect(view.className).toBe('tournament-bracket-view col-sm-2');
+            it('sets the className to "tournament-bracket-view col-sm-3".', function () {
+                expect(view.className).toBe('tournament-bracket-view col-sm-3');
             });
         });
 

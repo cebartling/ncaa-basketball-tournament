@@ -2,7 +2,7 @@
     'use strict';
 
     BasketballTournament.Views.TournamentBracketView = Backbone.View.extend({
-        className: 'tournament-bracket-view col-sm-2',
+        className: 'tournament-bracket-view col-sm-3',
         template: JST['app/scripts/templates/tournament-bracket-view.hbs'],
 
         render: function () {
