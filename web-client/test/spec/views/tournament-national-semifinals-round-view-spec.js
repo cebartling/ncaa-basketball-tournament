@@ -21,9 +21,14 @@
             it('sets the className to "tournament-round-view".', function () {
                 expect(view.className).toBe('tournament-round-view');
             });
+
+            it('initializes a childView property as an empty array', function () {
+                expect(view.childViews instanceof Array).toBeTruthy();
+                expect(view.childViews.length).toBe(0);
+            });
         });
 
-        describe('Render view', function () {
+        describe('.render function', function () {
 
             it("invokes the template function, passing an empty context.", function () {
                 var spy = spyOn(view, 'template').andCallThrough();
@@ -41,6 +46,53 @@
                 expect(view.render()).toBe(view);
             });
         });
+
+        describe('.renderBrackets function', function () {
+            beforeEach(function () {
+                view.$el = $('<div><div id="brackets-container"></div></div>');
+            });
+
+            it('should remove all previous child views.', function () {
+                var spy = spyOn(view, 'removeChildViews');
+                view.renderBrackets();
+                expect(spy).toHaveBeenCalled();
+            });
+
+            it('should render 2 game brackets for the national semifinals round.', function () {
+                view.renderBrackets();
+                expect(view.$el.find('div.tournament-bracket-view').length).toBe(2);
+            });
+
+            it('should have 2 child views in the childViews array.', function () {
+                view.renderBrackets();
+                expect(view.childViews.length).toBe(2);
+            });
+        });
+
+        describe('.removeChildViews function', function () {
+            var childView;
+
+            beforeEach(function () {
+                childView = {
+                    remove: function () {
+                    }
+                };
+                view.childViews = [childView];
+            });
+
+            it('should call remove on the child view.', function () {
+                var spy = spyOn(childView, 'remove');
+                view.removeChildViews();
+                expect(spy).toHaveBeenCalled();
+            });
+
+            it('should reinitialize the childViews array to an empty array.', function () {
+                expect(view.childViews.length).toBe(1);
+                view.removeChildViews();
+                expect(view.childViews.length).toBe(0);
+            });
+        });
+
     });
 
 })();

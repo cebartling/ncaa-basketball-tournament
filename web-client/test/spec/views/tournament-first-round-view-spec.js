@@ -28,7 +28,7 @@
             });
         });
 
-        describe('Render view', function () {
+        describe('.render function', function () {
 
             it("invokes the template function, passing an empty context.", function () {
                 var spy = spyOn(view, 'template').andCallThrough();
@@ -72,6 +72,30 @@
             it('should have 4 child views in the childViews array.', function () {
                 view.renderBrackets();
                 expect(view.childViews.length).toBe(4);
+            });
+        });
+
+        describe('.removeChildViews function', function () {
+            var childView;
+
+            beforeEach(function () {
+                childView = {
+                    remove: function () {
+                    }
+                };
+                view.childViews = [childView];
+            });
+
+            it('should call remove on the child view.', function () {
+                var spy = spyOn(childView, 'remove');
+                view.removeChildViews();
+                expect(spy).toHaveBeenCalled();
+            });
+
+            it('should reinitialize the childViews array to an empty array.', function () {
+                expect(view.childViews.length).toBe(1);
+                view.removeChildViews();
+                expect(view.childViews.length).toBe(0);
             });
         });
     });
