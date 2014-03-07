@@ -178,5 +178,107 @@
                 expect($('div.main-content div#round-four-jasmine-test-div').length).toBe(1);
             });
         });
+
+        describe('.showRound5 function', function () {
+            var modelSpy, viewSpy;
+            var stubModel = { };
+            var stubView = {
+                render: function () {
+                    return this;
+                },
+
+                el: '<div id="round-five-jasmine-test-div"></div>'
+            };
+
+            beforeEach(function () {
+                modelSpy = spyOn(BasketballTournament.Models, 'TournamentRoundModel').andReturn(stubModel);
+                viewSpy = spyOn(BasketballTournament.Views, 'TournamentRegionalRoundView').andReturn(stubView);
+                // Use jasmine-fixture to add DOM fixture for testing
+                affix('div.main-content');
+            });
+
+            it('creates a new model.', function () {
+                appRouter.showRound5();
+                expect(modelSpy).toHaveBeenCalledWith(BasketballTournament.DataBuilders.TournamentRoundDataBuilder.round5, {round: 5});
+            });
+
+            it('creates a new view.', function () {
+                appRouter.showRound5();
+                expect(viewSpy).toHaveBeenCalledWith({model: stubModel});
+            });
+
+            it('sets the inner HTML of main-content div.', function () {
+                appRouter.showRound5();
+                expect($('div.main-content div#round-five-jasmine-test-div').length).toBe(1);
+            });
+        });
+
+        describe('.showRound6 function', function () {
+            var modelSpy, viewSpy;
+            var stubModel = { };
+            var stubView = {
+                render: function () {
+                    return this;
+                },
+
+                el: '<div id="round-six-jasmine-test-div"></div>'
+            };
+
+            beforeEach(function () {
+                modelSpy = spyOn(BasketballTournament.Models, 'TournamentRoundModel').andReturn(stubModel);
+                viewSpy = spyOn(BasketballTournament.Views, 'TournamentNationalSemifinalsRoundView').andReturn(stubView);
+                // Use jasmine-fixture to add DOM fixture for testing
+                affix('div.main-content');
+            });
+
+            it('creates a new model.', function () {
+                appRouter.showRound6();
+                expect(modelSpy).toHaveBeenCalledWith(BasketballTournament.DataBuilders.TournamentRoundDataBuilder.round6, {round: 6});
+            });
+
+            it('creates a new view.', function () {
+                appRouter.showRound6();
+                expect(viewSpy).toHaveBeenCalledWith({model: stubModel});
+            });
+
+            it('sets the inner HTML of main-content div.', function () {
+                appRouter.showRound6();
+                expect($('div.main-content div#round-six-jasmine-test-div').length).toBe(1);
+            });
+        });
+        
+        describe('.showRound7 function', function () {
+            var modelSpy, viewSpy;
+            var stubModel = { };
+            var stubView = {
+                render: function () {
+                    return this;
+                },
+
+                el: '<div id="round-seven-jasmine-test-div"></div>'
+            };
+
+            beforeEach(function () {
+                modelSpy = spyOn(BasketballTournament.Models, 'TournamentRoundModel').andReturn(stubModel);
+                viewSpy = spyOn(BasketballTournament.Views, 'TournamentNationalFinalsRoundView').andReturn(stubView);
+                // Use jasmine-fixture to add DOM fixture for testing
+                affix('div.main-content');
+            });
+
+            it('creates a new model.', function () {
+                appRouter.showRound7();
+                expect(modelSpy).toHaveBeenCalledWith(BasketballTournament.DataBuilders.TournamentRoundDataBuilder.round7, {round: 7});
+            });
+
+            it('creates a new view.', function () {
+                appRouter.showRound7();
+                expect(viewSpy).toHaveBeenCalledWith({model: stubModel});
+            });
+
+            it('sets the inner HTML of main-content div.', function () {
+                appRouter.showRound7();
+                expect($('div.main-content div#round-seven-jasmine-test-div').length).toBe(1);
+            });
+        });
     });
 })();

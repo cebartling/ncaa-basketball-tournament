@@ -1,5 +1,8 @@
 $(document).ready(function () {
     'use strict';
 
-    BasketballTournament.init();
+    var appRouter = new BasketballTournament.AppRouter();
+    Backbone.history.start();
+    var roundNavigatorView = new BasketballTournament.Views.RoundNavigatorView();
+    $('div.navigator').html(roundNavigatorView.render().el);
 });
