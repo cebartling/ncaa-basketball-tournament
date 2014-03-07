@@ -28,18 +28,86 @@
         });
 
         describe('.render function', function () {
-            var context = {round_header: 'Second round'};
+            describe('second round', function () {
+                var context = {round_header: 'Second round'};
 
-            it("invokes the template function, passing an empty context.", function () {
-                var spy = spyOn(view, 'template').andCallThrough();
-                view.render();
-                expect(spy).toHaveBeenCalledWith(context);
+                it("invokes the template function, passing an empty context.", function () {
+                    var spy = spyOn(view, 'template').andCallThrough();
+                    view.render();
+                    expect(spy).toHaveBeenCalledWith(context);
+                });
+
+                it("invokes the $el.html function, pass the template invocation output.", function () {
+                    var spy = spyOn(view.$el, 'html').andCallThrough();
+                    view.render();
+                    expect(spy).toHaveBeenCalledWith(view.template(context));
+                });
             });
 
-            it("invokes the $el.html function, pass the template invocation output.", function () {
-                var spy = spyOn(view.$el, 'html').andCallThrough();
-                view.render();
-                expect(spy).toHaveBeenCalledWith(view.template(context));
+            describe('third round', function () {
+                var context = {round_header: 'Third round'};
+
+                beforeEach(function () {
+                    model = new BasketballTournament.Models.TournamentRoundModel
+                        (BasketballTournament.DataBuilders.TournamentRoundDataBuilder.round3, {round: 3});
+                    view = new BasketballTournament.Views.TournamentRegionalRoundView({model: model});
+                });
+
+                it("invokes the template function, passing an empty context.", function () {
+                    var spy = spyOn(view, 'template').andCallThrough();
+                    view.render();
+                    expect(spy).toHaveBeenCalledWith(context);
+                });
+
+                it("invokes the $el.html function, pass the template invocation output.", function () {
+                    var spy = spyOn(view.$el, 'html').andCallThrough();
+                    view.render();
+                    expect(spy).toHaveBeenCalledWith(view.template(context));
+                });
+            });
+
+            describe('fourth round', function () {
+                var context = {round_header: 'Regional Semifinals'};
+
+                beforeEach(function () {
+                    model = new BasketballTournament.Models.TournamentRoundModel
+                        (BasketballTournament.DataBuilders.TournamentRoundDataBuilder.round4, {round: 4});
+                    view = new BasketballTournament.Views.TournamentRegionalRoundView({model: model});
+                });
+
+                it("invokes the template function, passing an empty context.", function () {
+                    var spy = spyOn(view, 'template').andCallThrough();
+                    view.render();
+                    expect(spy).toHaveBeenCalledWith(context);
+                });
+
+                it("invokes the $el.html function, pass the template invocation output.", function () {
+                    var spy = spyOn(view.$el, 'html').andCallThrough();
+                    view.render();
+                    expect(spy).toHaveBeenCalledWith(view.template(context));
+                });
+            });
+
+            describe('fifth round', function () {
+                var context = {round_header: 'Regional Finals'};
+
+                beforeEach(function () {
+                    model = new BasketballTournament.Models.TournamentRoundModel
+                        (BasketballTournament.DataBuilders.TournamentRoundDataBuilder.round5, {round: 5});
+                    view = new BasketballTournament.Views.TournamentRegionalRoundView({model: model});
+                });
+
+                it("invokes the template function, passing an empty context.", function () {
+                    var spy = spyOn(view, 'template').andCallThrough();
+                    view.render();
+                    expect(spy).toHaveBeenCalledWith(context);
+                });
+
+                it("invokes the $el.html function, pass the template invocation output.", function () {
+                    var spy = spyOn(view.$el, 'html').andCallThrough();
+                    view.render();
+                    expect(spy).toHaveBeenCalledWith(view.template(context));
+                });
             });
 
             it("returns a reference to the view itself, for method chaining.", function () {

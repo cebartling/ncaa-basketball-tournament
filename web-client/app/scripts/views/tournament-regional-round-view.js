@@ -10,13 +10,15 @@
         },
 
         render: function () {
-            var json = {round_header: 'Regional Finals'};
+            var json;
             if (this.model.get('round') == 2) {
                 json = {round_header: 'Second round'};
             } else if (this.model.get('round') == 3) {
                 json = {round_header: 'Third round'};
             } else if (this.model.get('round') == 4) {
                 json = {round_header: 'Regional Semifinals'};
+            } else {
+                json = {round_header: 'Regional Finals'};
             }
             this.$el.html(this.template(json));
             this.renderBrackets();
