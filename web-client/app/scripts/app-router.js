@@ -12,9 +12,6 @@
             'round7': 'showRound7'
         },
 
-        initialize: function() {
-        },
-
         showRound1: function() {
             var model = new BasketballTournament.Models.TournamentRoundModel(BasketballTournament.DataBuilders.TournamentRoundDataBuilder.round1, {round: 1});
             var view = new BasketballTournament.Views.TournamentFirstRoundView({model: model});

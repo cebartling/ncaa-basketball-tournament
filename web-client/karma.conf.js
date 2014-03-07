@@ -18,6 +18,7 @@ module.exports = function (config) {
             'app/bower_components/backbone/backbone.js',
             'app/bower_components/handlebars/handlebars.js',
             'app/bower_components/bootstrap/dist/js/bootstrap.js',
+            'test/bower_components/jasmine-fixture/dist/jasmine-fixture.js',
             'app/scripts/namespaces.js',
             '.tmp/scripts/templates.js',
             'app/scripts/**/*.js',
