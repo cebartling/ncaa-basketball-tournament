@@ -12,3 +12,9 @@
 *.iws
 
 /web-client/.idea/
+
+/web-client/coverage/
+
+/acceptance-tests/out/
+
+/acceptance-tests/build/
