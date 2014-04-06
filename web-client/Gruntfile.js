@@ -39,7 +39,6 @@ module.exports = function (grunt) {
                     '<%= yeoman.app %>/scripts/namespaces.js',
                     '<%= yeoman.app %>/scripts/main.js',
                     '<%= yeoman.app %>/scripts/models/*.js',
-                    '<%= yeoman.app %>/scripts/collections/*.js',
                     '<%= yeoman.app %>/scripts/views/*.js'
                 ],
                 dest: '.tmp/scripts/combined-scripts.js'
@@ -146,7 +145,7 @@ module.exports = function (grunt) {
                     specs: 'test/spec/**/*-spec.js',
                     vendor: [
                         '<%= yeoman.app %>/bower_components/modernizr/modernizr.js',
-                        '<%= yeoman.app %>/bower_components/jquery/jquery.js',
+                        '<%= yeoman.app %>/bower_components/jquery/dist/jquery.js',
                         '<%= yeoman.app %>/bower_components/bootstrap/dist/js/bootstrap.js',
                         '<%= yeoman.app %>/bower_components/underscore/underscore.js',
                         '<%= yeoman.app %>/bower_components/backbone/backbone.js',
